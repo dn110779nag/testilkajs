@@ -47,13 +47,14 @@ import org.mozilla.javascript.RhinoException;
  *
  * @author Новомлинов Александр
  */
-public class MainFrame extends JFrame {
+public class MainFrame extends JFrame implements JsonTree.SelectionListener{
 
     private final JTabbedPane tabPane = new JTabbedPane();
     private final JTextArea logArea = new JTextArea();
     private final JEditorPane scriptEditor = new JEditorPane();
     private final JEditorPane inputEditor = new JEditorPane();
     private final JEditorPane outputEditor = new JEditorPane();
+    private final JsonTree jsonTree = new JsonTree(this);
     private File currDir = new File("").getAbsoluteFile();
 
     public MainFrame() {
@@ -88,7 +89,13 @@ public class MainFrame extends JFrame {
         DefaultSyntaxKit.initKit();
         tabPane.add("JS", new JScrollPane(scriptEditor));
         tabPane.add("Input", new JScrollPane(inputEditor));
-        tabPane.add("Output", new JScrollPane(outputEditor));
+        JSplitPane outSplitPane = new JSplitPane(
+                JSplitPane.HORIZONTAL_SPLIT,
+                new JScrollPane(jsonTree),
+                new JScrollPane(outputEditor)
+        );
+        outSplitPane.setResizeWeight(0.1);
+        tabPane.add("Output", outSplitPane);
 //        tabPane.setSelectedIndex(1);
 
         scriptEditor.setContentType("text/javascript");
@@ -120,7 +127,8 @@ public class MainFrame extends JFrame {
                 JsonElement el = parser.parse(ret.getOutputValue());
                 JsonElement jerr = el.getAsJsonObject().get("stack");
                 
-                outputEditor.setText(gson.toJson(el));
+                //outputEditor.setText(gson.toJson(el));
+                jsonTree.setJson(el);
                 tabPane.setSelectedIndex(2);
                 String err;
                 if(jerr!=null && !(jerr instanceof JsonNull) && (err=jerr.getAsString())!=null && !err.trim().equals("")){
@@ -182,7 +190,7 @@ public class MainFrame extends JFrame {
         
         return toolBar;
     }
-
+    
     public static void main(String[] args) {
         new MainFrame().setVisible(true);
     }
@@ -203,6 +211,11 @@ public class MainFrame extends JFrame {
         JOptionPane.showMessageDialog(MainFrame.this, err, "Ошибка!!!", JOptionPane.ERROR_MESSAGE);
         logArea.append(err+"\n");
         
+    }
+
+    @Override
+    public void onSelect(String value) {
+        this.outputEditor.setText(value);
     }
 
 }
