@@ -1,0 +1,509 @@
+{
+    "data": {
+        "listHOS": [{
+                "hos": "14G2LJLL5AK7I0",
+                "address": null,
+                "mapOflistProviderService": {
+                    "hosId": null,
+                    "mapOfListProvidersService": {}
+                },
+                "listClients": {
+                    "listClient": [{
+                            "hosId": "14G2LJLL5AK7I0",
+                            "ekbId": "46313850",
+                            "catclId": 1,
+                            "catclDesc": null,
+                            "billingStatus": "Y",
+                            "ekbOwner": null,
+                            "modifyDate": 1416215795130
+                        }],
+                    "flagOwner": false
+                },
+                "addressMessage": {
+                    "zip": "49049",
+                    "fullNameAddress": "15",
+                    "listNodeAddress": [{
+                            "nodeName": "Украина",
+                            "typeName": "страна",
+                            "nodeOrder": 1
+                        }, {
+                            "nodeName": "Днепропетровская",
+                            "typeName": "область",
+                            "nodeOrder": 2
+                        }, {
+                            "nodeName": "Днепропетровск",
+                            "typeName": "город",
+                            "nodeOrder": 4
+                        }, {
+                            "nodeName": "Штабной",
+                            "typeName": "переулок",
+                            "nodeOrder": 8
+                        }, {
+                            "nodeName": "5",
+                            "typeName": "дом",
+                            "nodeOrder": 9
+                        }, {
+                            "nodeName": "15",
+                            "typeName": "квартира",
+                            "nodeOrder": 11
+                        }],
+                    "outherId": "14G2LJLL5AK7I0"
+                }
+            }, {
+                "hos": "1314B71FJ3TUP0",
+                "address": null,
+                "mapOflistProviderService": {
+                    "hosId": null,
+                    "mapOfListProvidersService": {}
+                },
+                "listClients": {
+                    "listClient": [],
+                    "flagOwner": false
+                },
+                "addressMessage": {
+                    "zip": "49051",
+                    "fullNameAddress": "25",
+                    "listNodeAddress": [{
+                            "nodeName": "Украина",
+                            "typeName": "страна",
+                            "nodeOrder": 1
+                        }, {
+                            "nodeName": "Днепропетровская",
+                            "typeName": "область",
+                            "nodeOrder": 2
+                        }, {
+                            "nodeName": "Днепропетровск",
+                            "typeName": "город",
+                            "nodeOrder": 4
+                        }, {
+                            "nodeName": "Косиора",
+                            "typeName": "улица",
+                            "nodeOrder": 8
+                        }, {
+                            "nodeName": "5",
+                            "typeName": "дом",
+                            "nodeOrder": 9
+                        }, {
+                            "nodeName": "25",
+                            "typeName": "квартира",
+                            "nodeOrder": 11
+                        }],
+                    "outherId": "1314B71FJ3TUP0"
+                }
+            }, {
+                "hos": "32GMESVQ3W2J00",
+                "address": null,
+                "mapOflistProviderService": {
+                    "hosId": null,
+                    "mapOfListProvidersService": {
+                        "49": {
+                            "hosId": null,
+                            "providerServices": [{
+                                    "provideId": "40328177",
+                                    "numberPhone": null,
+                                    "templateId": "97190961",
+                                    "templateStatus": "1",
+                                    "categoryId": 39,
+                                    "categoryCode": null,
+                                    "categoryDesc": null,
+                                    "organizationOkpo": "35985702",
+                                    "organizationEKB": null,
+                                    "organizationName": "ООО Днепропетровские цифровые коммуникации",
+                                    "organizationMFO": "380838",
+                                    "organizationAccount": null,
+                                    "totalPersonalAcc": "957326",
+                                    "personalAcc": "26005799966300",
+                                    "organizationId": "403281",
+                                    "baseId": 0,
+                                    "idBP": "957326",
+                                    "hosId": null,
+                                    "addrId": "Косиора улица, 5, 25",
+                                    "clientEKB": "46313850",
+                                    "clientCategory": 0,
+                                    "serviceId": "403321",
+                                    "serviceName": "Локальная сеть",
+                                    "searchkey": null,
+                                    "inn": null,
+                                    "city_id": 4249,
+                                    "fio": "Жданов Александр Александрович",
+                                    "division_okpo": null,
+                                    "budget_kod": null,
+                                    "comp_kinds_name": "Интернет",
+                                    "sp_hash": "d9acd4b2f5e6fb0f61efbfe93af8fdc7",
+                                    "p_timestamp": "2013-05-23 16:56:18.160"
+                                }, {
+                                    "provideId": "g1412790",
+                                    "numberPhone": "+380994415026",
+                                    "templateId": "160499663",
+                                    "templateStatus": "1",
+                                    "categoryId": 39,
+                                    "categoryCode": null,
+                                    "categoryDesc": null,
+                                    "organizationOkpo": "2918313092",
+                                    "organizationEKB": null,
+                                    "organizationName": "Петруша А.А. ФЛП",
+                                    "organizationMFO": "351533",
+                                    "organizationAccount": null,
+                                    "totalPersonalAcc": null,
+                                    "personalAcc": "26003060152248",
+                                    "organizationId": "1412802",
+                                    "baseId": 0,
+                                    "idBP": "1986347",
+                                    "hosId": null,
+                                    "addrId": "пер. Отакара Яроша 8а к. 707",
+                                    "clientEKB": "46313850",
+                                    "clientCategory": 0,
+                                    "serviceId": "1412805",
+                                    "serviceName": "Интернет",
+                                    "searchkey": null,
+                                    "inn": null,
+                                    "city_id": 4249,
+                                    "fio": "Фурсов Станислав Сергеевич",
+                                    "division_okpo": null,
+                                    "budget_kod": null,
+                                    "comp_kinds_name": "Интернет",
+                                    "sp_hash": "0e0ff90d1f57fa4752f9329ce79b6699",
+                                    "p_timestamp": "2014-12-01 17:01:46.196"
+                                }]
+                        },
+                        "51": {
+                            "hosId": null,
+                            "providerServices": [{
+                                    "provideId": "403281",
+                                    "numberPhone": null,
+                                    "templateId": "97190961",
+                                    "templateStatus": "1",
+                                    "categoryId": 39,
+                                    "categoryCode": null,
+                                    "categoryDesc": null,
+                                    "organizationOkpo": "35985702",
+                                    "organizationEKB": null,
+                                    "organizationName": "ООО Днепропетровские цифровые коммуникации",
+                                    "organizationMFO": "380838",
+                                    "organizationAccount": null,
+                                    "totalPersonalAcc": "957326",
+                                    "personalAcc": "26005799966300",
+                                    "organizationId": "403281",
+                                    "baseId": 0,
+                                    "idBP": "957326",
+                                    "hosId": null,
+                                    "addrId": "Косиора улица, 5, 25",
+                                    "clientEKB": "46313850",
+                                    "clientCategory": 0,
+                                    "serviceId": "403321",
+                                    "serviceName": "Локальная сеть",
+                                    "searchkey": null,
+                                    "inn": null,
+                                    "city_id": 4249,
+                                    "fio": "Жданов Александр Александрович",
+                                    "division_okpo": null,
+                                    "budget_kod": null,
+                                    "comp_kinds_name": "Интернет",
+                                    "sp_hash": "d9acd4b2f5e6fb0f61efbfe93af8fdc7",
+                                    "p_timestamp": "2013-05-23 16:56:18.160"
+                                }, {
+                                    "provideId": "g1412790",
+                                    "numberPhone": "+380994415026",
+                                    "templateId": "160499663",
+                                    "templateStatus": "1",
+                                    "categoryId": 39,
+                                    "categoryCode": null,
+                                    "categoryDesc": null,
+                                    "organizationOkpo": "2918313092",
+                                    "organizationEKB": null,
+                                    "organizationName": "Петруша А.А. ФЛП",
+                                    "organizationMFO": "351533",
+                                    "organizationAccount": null,
+                                    "totalPersonalAcc": null,
+                                    "personalAcc": "26003060152248",
+                                    "organizationId": "1412802",
+                                    "baseId": 0,
+                                    "idBP": "1986347",
+                                    "hosId": null,
+                                    "addrId": "пер. Отакара Яроша 8а к. 707",
+                                    "clientEKB": "46313850",
+                                    "clientCategory": 0,
+                                    "serviceId": "1412805",
+                                    "serviceName": "Интернет",
+                                    "searchkey": null,
+                                    "inn": null,
+                                    "city_id": 4249,
+                                    "fio": "Фурсов Станислав Сергеевич",
+                                    "division_okpo": null,
+                                    "budget_kod": null,
+                                    "comp_kinds_name": "Интернет",
+                                    "sp_hash": "0e0ff90d1f57fa4752f9329ce79b6699",
+                                    "p_timestamp": "2014-12-01 17:01:46.196"
+                                }]
+                        },
+                        "147": {
+                            "hosId": null,
+                            "providerServices": [{
+                                    "provideId": "403281",
+                                    "numberPhone": null,
+                                    "templateId": "97190961",
+                                    "templateStatus": "1",
+                                    "categoryId": 39,
+                                    "categoryCode": null,
+                                    "categoryDesc": null,
+                                    "organizationOkpo": "35985702",
+                                    "organizationEKB": null,
+                                    "organizationName": "ООО Днепропетровские цифровые коммуникации",
+                                    "organizationMFO": "380838",
+                                    "organizationAccount": null,
+                                    "totalPersonalAcc": "957326",
+                                    "personalAcc": "26005799966300",
+                                    "organizationId": "403281",
+                                    "baseId": 0,
+                                    "idBP": "1986347",
+                                    "hosId": null,
+                                    "addrId": "Косиора улица, 5, 25",
+                                    "clientEKB": "46313850",
+                                    "clientCategory": 0,
+                                    "serviceId": "403321",
+                                    "serviceName": "Локальная сеть",
+                                    "searchkey": null,
+                                    "inn": null,
+                                    "city_id": 4249,
+                                    "fio": "Жданов Александр Александрович",
+                                    "division_okpo": null,
+                                    "budget_kod": null,
+                                    "comp_kinds_name": "Интернет",
+                                    "sp_hash": "d9acd4b2f5e6fb0f61efbfe93af8fdc7",
+                                    "p_timestamp": "2013-05-23 16:56:18.160"
+                                }, {
+                                    "provideId": "403281",
+                                    "numberPhone": "+380994415026",
+                                    "templateId": "97190961",
+                                    "templateStatus": "1",
+                                    "categoryId": 39,
+                                    "categoryCode": null,
+                                    "categoryDesc": null,
+                                    "organizationOkpo": "2918313092",
+                                    "organizationEKB": null,
+                                    "organizationName": "Петруша А.А. ФЛП",
+                                    "organizationMFO": "351533",
+                                    "organizationAccount": null,
+                                    "totalPersonalAcc": null,
+                                    "personalAcc": "26003060152248",
+                                    "organizationId": "1412802",
+                                    "baseId": 0,
+                                    "idBP": "1986347",
+                                    "hosId": null,
+                                    "addrId": "пер. Отакара Яроша 8а к. 707",
+                                    "clientEKB": "46313850",
+                                    "clientCategory": 0,
+                                    "serviceId": "1412805",
+                                    "serviceName": "Интернет",
+                                    "searchkey": null,
+                                    "inn": null,
+                                    "city_id": 4249,
+                                    "fio": "Фурсов Станислав Сергеевич",
+                                    "division_okpo": null,
+                                    "budget_kod": null,
+                                    "comp_kinds_name": "Интернет",
+                                    "sp_hash": "d9acd4b2f5e6fb0f61efbfe93af8fdc7",
+                                    "p_timestamp": "2014-12-01 17:01:46.196"
+                                }]
+
+                        }
+                    }
+
+                },
+                "listClients": {
+                    "listClient": [],
+                    "flagOwner": false
+                },
+                "addressMessage": {
+                    "zip": "49051",
+                    "fullNameAddress": "25",
+                    "listNodeAddress": [{
+                            "nodeName": "Украина",
+                            "typeName": "страна",
+                            "nodeOrder": 1
+                        }, {
+                            "nodeName": "Днепропетровская",
+                            "typeName": "область",
+                            "nodeOrder": 2
+                        }, {
+                            "nodeName": "Днепропетровск",
+                            "typeName": "город",
+                            "nodeOrder": 4
+                        }, {
+                            "nodeName": "Косиора",
+                            "typeName": "улица",
+                            "nodeOrder": 8
+                        }, {
+                            "nodeName": "5",
+                            "typeName": "дом",
+                            "nodeOrder": 9
+                        }, {
+                            "nodeName": "2",
+                            "typeName": "корпус",
+                            "nodeOrder": 10
+                        }, {
+                            "nodeName": "25",
+                            "typeName": "квартира",
+                            "nodeOrder": 11
+                        }],
+                    "outherId": "32GMESVQ3W2J00"
+                }
+            },
+            {
+                "hos": "",
+                "address": null,
+                "mapOflistProviderService": {
+                    "hosId": null,
+                    "mapOfListProvidersService": {
+                        "39": {
+                            "hosId": null,
+                            "providerServices": [{
+                                    "provideId": "403281",
+                                    "numberPhone": null,
+                                    "templateId": "97190961",
+                                    "templateStatus": "1",
+                                    "categoryId": 39,
+                                    "categoryCode": null,
+                                    "categoryDesc": null,
+                                    "organizationOkpo": "35985702",
+                                    "organizationEKB": null,
+                                    "organizationName": "ООО Днепропетровские цифровые коммуникации",
+                                    "organizationMFO": "380838",
+                                    "organizationAccount": null,
+                                    "totalPersonalAcc": "957326",
+                                    "personalAcc": "26005799966300",
+                                    "organizationId": "403281",
+                                    "baseId": 0,
+                                    "idBP": "957326",
+                                    "hosId": null,
+                                    "addrId": "Косиора улица, 5, 25",
+                                    "clientEKB": "46313850",
+                                    "clientCategory": 0,
+                                    "serviceId": "403321",
+                                    "serviceName": "Локальная сеть",
+                                    "searchkey": null,
+                                    "inn": null,
+                                    "city_id": 4249,
+                                    "fio": "Жданов Александр Александрович",
+                                    "division_okpo": null,
+                                    "budget_kod": null,
+                                    "comp_kinds_name": "Интернет",
+                                    "sp_hash": "d9acd4b2f5e6fb0f61efbfe93af8fdc7",
+                                    "p_timestamp": "2013-05-23 16:56:18.160"
+                                }, {
+                                    "provideId": "g1412790",
+                                    "numberPhone": "+380994415026",
+                                    "templateId": "160499663",
+                                    "templateStatus": "1",
+                                    "categoryId": 39,
+                                    "categoryCode": null,
+                                    "categoryDesc": null,
+                                    "organizationOkpo": "2918313092",
+                                    "organizationEKB": null,
+                                    "organizationName": "Петруша А.А. ФЛП",
+                                    "organizationMFO": "351533",
+                                    "organizationAccount": null,
+                                    "totalPersonalAcc": null,
+                                    "personalAcc": "26003060152248",
+                                    "organizationId": "1412802",
+                                    "baseId": 0,
+                                    "idBP": "1986347",
+                                    "hosId": null,
+                                    "addrId": "пер. Отакара Яроша 8а к. 707",
+                                    "clientEKB": "46313850",
+                                    "clientCategory": 0,
+                                    "serviceId": "1412805",
+                                    "serviceName": "Интернет",
+                                    "searchkey": null,
+                                    "inn": null,
+                                    "city_id": 4249,
+                                    "fio": "Фурсов Станислав Сергеевич",
+                                    "division_okpo": null,
+                                    "budget_kod": null,
+                                    "comp_kinds_name": "Интернет",
+                                    "sp_hash": "0e0ff90d1f57fa4752f9329ce79b6699",
+                                    "p_timestamp": "2014-12-01 17:01:46.196"
+                                }]
+                        }
+                    }
+                },
+                "listClients": {
+                    "listClient": [],
+                    "flagOwner": false
+                },
+                "addressMessage": null
+            }],
+        "listInvoises": {
+            "listInvoises": [{
+                    "id": "ICCABSD5AW1",
+                    "bank": "PB",
+                    "clientIdType": "e",
+                    "clientID": "51279433",
+                    "phone": "+380984934544",
+                    "card": null,
+                    "statysId": "A",
+                    "dateCreate": 1438090082406,
+                    "dateChange": 1438090082406,
+                    "sumInv": "0.01",
+                    "commission": "0.02",
+                    "delivery": "0.03",
+                    "allSum": "0.06",
+                    "sumAct": "0",
+                    "currency": "uah",
+                    "account": "26031314001038",
+                    "mfo": null,
+                    "okpo": null,
+                    "payDetails": "payDet",
+                    "url": null,
+                    "invValid": 1439586000000,
+                    "tso": null,
+                    "lang": null,
+                    "invName": "name of invoise",
+                    "invDetails": "details of invoise",
+                    "numCell": null,
+                    "recipientName": null,
+                    "complexid": "test",
+                    "termId": null,
+                    "installment": null,
+                    "chequeInfo": null,
+                    "type": "S",
+                    "iid": "168618569"
+                }, {
+                    "id": "ICCALQLUAW2",
+                    "bank": "PB",
+                    "clientIdType": "m",
+                    "clientID": "51279433",
+                    "phone": "+380984934544",
+                    "card": null,
+                    "statysId": "A",
+                    "dateCreate": 1438090126603,
+                    "dateChange": 1438329632083,
+                    "sumInv": "10.06",
+                    "commission": "0",
+                    "delivery": "0",
+                    "allSum": "10.06",
+                    "sumAct": "1.33",
+                    "currency": "uah",
+                    "account": "159357",
+                    "mfo": "444555",
+                    "okpo": "14360570",
+                    "payDetails": "за услуги",
+                    "url": null,
+                    "invValid": 1440882000000,
+                    "tso": null,
+                    "lang": null,
+                    "invName": "За услуги депозитария",
+                    "invDetails": "2303384",
+                    "numCell": null,
+                    "recipientName": "КБ ПРИВАТБАНК   М.ДН-СК",
+                    "complexid": "inv",
+                    "termId": null,
+                    "installment": null,
+                    "chequeInfo": null,
+                    "type": "s",
+                    "iid": "181854506"
+                }]
+        },
+        "ekb": "46313850"
+    }
+}

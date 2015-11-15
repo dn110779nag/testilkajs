@@ -1,0 +1,267 @@
+{
+    "listHOS": [{
+            "hos": "1316FKSI8ZN370",
+            "mapOflistProviderService": {
+                "mapOfListProvidersService": {}
+            },
+            "listClients": {
+                "listClient": [],
+                "flagOwner": false
+            },
+            "addressMessage": {
+                "zip": "49000",
+                "fullNameAddress": "113",
+                "listNodeAddress": [{
+                        "nodeName": "Украина",
+                        "typeName": "страна",
+                        "nodeOrder": 1,
+                        "typeSName": "стр"
+                    }, {
+                        "nodeName": "Днепропетровская",
+                        "typeName": "область",
+                        "nodeOrder": 2,
+                        "typeSName": "обл"
+                    }, {
+                        "nodeName": "Днепропетровск",
+                        "typeName": "город",
+                        "nodeOrder": 4,
+                        "typeSName": "г"
+                    }, {
+                        "nodeName": "Гладкова",
+                        "typeName": "улица",
+                        "nodeOrder": 8,
+                        "typeSName": "ул"
+                    }, {
+                        "nodeName": "47",
+                        "typeName": "дом",
+                        "nodeOrder": 9,
+                        "typeSName": "д"
+                    }, {
+                        "nodeName": "113",
+                        "typeName": "квартира",
+                        "nodeOrder": 11,
+                        "typeSName": "кв"
+                    }],
+                "outherId": "1316FKSI8ZN370"
+            }
+        }, {
+            "hos": "",
+            "mapOflistProviderService": {
+                "mapOfListProvidersService": {
+                    "0": {
+                        "providerServices": [{
+                                "templateId": "a2814176",
+                                "categoryId": 0,
+                                "organizationName": "00000000",
+                                "baseId": 0,
+                                "clientEKB": "23467528",
+                                "clientCategory": 0,
+                                "serviceName": "ПЕРЕВОД ЛИЧНЫХ СРЕДСТВ",
+                                "city_id": 0
+                            }, {
+                                "templateId": "a3209191",
+                                "categoryId": 0,
+                                "organizationName": "МАЦЮК АНТОН АНАТОЛЬЕВИЧ",
+                                "baseId": 0,
+                                "clientEKB": "23467528",
+                                "clientCategory": 0,
+                                "serviceName": "ПЕРЕВОД ЛИЧНЫХ СРЕДСТВ. ПЛ-ЩИК: МАЦЮК АНТОН АНАТОЛЬЕВИЧ",
+                                "city_id": 0
+                            }, {
+                                "templateId": "a2643706",
+                                "categoryId": 0,
+                                "organizationName": "УКРТЕЛЕКОМ ПАО",
+                                "baseId": 0,
+                                "clientEKB": "23467528",
+                                "clientCategory": 0,
+                                "serviceName": "АБОНПЛАТА ЗА ТЕЛЕФОН 567637689",
+                                "city_id": 0
+                            }]
+                    },
+                    "40": {
+                        "providerServices": [{
+                                "provideId": "347953",
+                                "numberPhone": "567637689",
+                                "templateId": "76953848",
+                                "templateStatus": "1",
+                                "categoryId": 40,
+                                "organizationOkpo": "25543196",
+                                "organizationName": "Укртелеком ПАО",
+                                "organizationMFO": "305299",
+                                "totalPersonalAcc": "1233000510735080",
+                                "personalAcc": "26000060284728",
+                                "organizationId": "347953",
+                                "baseId": 0,
+                                "idBP": "1233000510735080567637689",
+                                "clientEKB": "23467528",
+                                "clientCategory": 0,
+                                "serviceId": "347956",
+                                "serviceName": "Услуги связи",
+                                "city_id": 4249,
+                                "fio": "МАЦЮК АНТОН АНАТОЛIЙОВИЧ",
+                                "division_okpo": "25543196",
+                                "comp_kinds_name": "Стационарная телефония",
+                                "sp_hash": "390fa639558d4b83c1ac96c64c612778",
+                                "p_timestamp": "2013-03-06 03:23:01.683"
+                            }]
+                    }
+                }
+            },
+            "listClients": {
+                "listClient": [],
+                "flagOwner": false
+            }
+        }],
+    "listInvoises": {
+        "listInvoises": [{
+                "id": "IBKOV5RSAW1",
+                "bank": "PB",
+                "clientIdType": "m",
+                "clientID": "23467528",
+                "phone": "+380664253224",
+                "statysId": "A",
+                "dateCreate": "2015-07-01 15:05:49.000+0300",
+                "dateChange": "2015-07-27 16:27:47.000+0300",
+                "sumInv": "0",
+                "commission": "0",
+                "delivery": "1.00",
+                "allSum": "1.00",
+                "sumAct": "0.00",
+                "currency": "UAH",
+                "account": "29026827079373",
+                "mfo": "305299",
+                "payDetails": "TTN #+380661216637",
+                "invValid": "2015-07-31 00:00:00.000+0300",
+                "invName": "+380661216637 посылка privat_test",
+                "invDetails": "privat_test",
+                "numCell": "V6H",
+                "complexid": "POST",
+                "chequeInfo": {
+                    "fields": [{
+                            "type": "Платеж за доставку:",
+                            "dest": "(р/c 26001060358954 305299 37806835 ПАТ КБ ПРИВАТБАНК)",
+                            "sum": 1.00
+                        }]
+                },
+                "iid": "1260",
+                "type": "P"
+            }, {
+                "id": "IA6UKLIWAW1",
+                "bank": "PB",
+                "clientIdType": "e",
+                "clientID": "23467528",
+                "phone": "+380664253224",
+                "statysId": "W",
+                "dateCreate": "2015-05-19 16:00:00.000+0300",
+                "dateChange": "2015-07-27 16:41:45.000+0300",
+                "sumInv": "0.01",
+                "commission": "0.10",
+                "delivery": "0.10",
+                "allSum": "0.01",
+                "sumAct": "0.00",
+                "currency": "UAH",
+                "account": "26002050229917",
+                "mfo": "305299",
+                "okpo": "30708593",
+                "payDetails": "TESTКвартплата от Микулич Людмила Петровна",
+                "invValid": "2015-05-30 00:00:00.000+0300",
+                "tso": "tso1,tso2, tso3",
+                "invName": "TEST",
+                "numCell": "1",
+                "recipientName": "TEST",
+                "complexid": "INV",
+                "chequeInfo": {
+                    "fields": [{
+                            "type": "abyrvalg",
+                            "dest": "Не так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж",
+                            "sum": 0.01
+                        }, {
+                            "type": "abyrvalg2",
+                            "dest": "Не так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж",
+                            "sum": 0.01
+                        }, {
+                            "type": "abyrvalg3",
+                            "dest": "Не так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж",
+                            "sum": 0.01
+                        }]
+                },
+                "iid": "denixx1",
+                "type": "P"
+            }, {
+                "id": "57C983151C6940C4BA5E82A167314C12",
+                "bank": "PB",
+                "clientIdType": "m",
+                "clientID": "23467528",
+                "phone": "+380664253224",
+                "statysId": "W",
+                "dateCreate": "2015-08-04 13:33:26.000+0300",
+                "dateChange": "2015-08-04 13:33:26.000+0300",
+                "sumInv": "0.00",
+                "commission": "0.00",
+                "delivery": "0.00",
+                "allSum": "1.00",
+                "sumAct": "0.00",
+                "currency": "UAH",
+                "account": "29025000793228",
+                "mfo": "305299",
+                "payDetails": "ПриватТест",
+                "invValid": "2015-09-03 00:00:00.000+0300",
+                "tso": "TS207915",
+                "invName": "fc_test_1435781947 посылка ПриватТест",
+                "invDetails": "TTN #fc_test_1435781947",
+                "numCell": "V5",
+                "complexid": "post",
+                "chequeInfo": {
+                    "fields": [{
+                            "type": "Платеж за доставку: ",
+                            "dest": "(р/c 26001060358954 305299 37806835 ПАТ КБ ПРИВАТБАНК)",
+                            "sum": 1.00
+                        }]
+                },
+                "iid": "82100",
+                "type": "P"
+            }, {
+                "id": "21D0931EC3D24E5A8BE7509A5AFBC785",
+                "bank": "PB",
+                "clientIdType": "e",
+                "clientID": "23467528",
+                "statysId": "W",
+                "dateCreate": "2015-08-11 09:47:42.000+0300",
+                "dateChange": "2015-08-11 09:47:42.000+0300",
+                "sumInv": "0.01",
+                "commission": "0.10",
+                "delivery": "0.10",
+                "allSum": "0.01",
+                "sumAct": "0.00",
+                "currency": "UAH",
+                "account": "26002050229917",
+                "mfo": "305299",
+                "okpo": "30708593",
+                "payDetails": "TESTКвартплата от Микулич Людмила Петровна",
+                "invValid": "2015-08-12 00:00:00.000+0300",
+                "tso": "tso1,tso2, tso3",
+                "invName": "TEST",
+                "numCell": "1",
+                "recipientName": "TEST",
+                "complexid": "inv",
+                "chequeInfo": {
+                    "fields": [{
+                            "type": "abyrvalg",
+                            "dest": "Не так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж",
+                            "sum": 0.01
+                        }, {
+                            "type": "abyrvalg2",
+                            "dest": "Не так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж",
+                            "sum": 0.01
+                        }, {
+                            "type": "abyrvalg3",
+                            "dest": "Не так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж и очень, но длинный текст в 250 символов кириллицыНе так уж",
+                            "sum": 0.01
+                        }]
+                },
+                "iid": "denixx1",
+                "type": "P"
+            }]
+    },
+    "ekb": "23467528"
+}

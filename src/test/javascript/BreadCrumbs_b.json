@@ -1,0 +1,239 @@
+{
+    "head": {
+        "templateServices": {
+            "service": [{
+                    "id": "1891169",
+                    "templateId": "174857764"
+                }]
+        },
+        "lang": "ru",
+        "pointType": "WP24",
+        "bank": "PB"
+    },
+    "services": {
+        "service": [{
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "Штрафы ГАИ"
+                        },
+                        "value": "Штрафы ГАИ"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "SE",
+                        "hintId": 81,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "серия протокола",
+                            "required": true,
+                            "slNo": 11,
+                            "regEx": "^[A-Z-А-Я]{2,2}[0-9]{1,1}$"
+                        },
+                        "value": "111"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "*;21081300;$DOP_SE$;$DOP_NO$;*$FIO$"
+                        },
+                        "value": "*;21081300;$DOP_SE$;$DOP_NO$;*$FIO$"
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        },
+                        "value": 0.01
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 753,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^[А-Яа-яіІїЇєЄґҐ][^ыЫъЪэЭ\\.,0-9a-zA-Z]{1,50}$"
+                        },
+                        "value": "Жданова Галина Евгеньевна"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "00000000"
+                        },
+                        "value": "00000000"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "NO",
+                        "hintId": 82,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "номер протокола",
+                            "required": true,
+                            "slNo": 12,
+                            "regEx": "^\\d{6}$"
+                        },
+                        "value": "000000"
+                    }],
+                "id": "1891169",
+                "name": "Штраф ГАИ",
+                "required": true,
+                "checked": true,
+                "forbidden": false,
+                "divisionID": 1891195,
+                "recalcMetersSum": false,
+                "block_save_template": false
+            }],
+        "division": [{
+                "id": "1891229",
+                "name": "УДКСУ у Чернівецькій обл.",
+                "okpo": "37836095",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891230",
+                "name": "УДКСУ у Чернігівській обл.",
+                "okpo": "37972475",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891225",
+                "name": "УДКСУ у Черкаській обл.",
+                "okpo": "37930566",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891221",
+                "name": "УДКСУ у Херсонській обл.",
+                "okpo": "37959517",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891222",
+                "name": "УДКСУ у Хмельницькій обл.",
+                "okpo": "37971775",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891216",
+                "name": "УДКСУ Харківській обл.",
+                "okpo": "37874947",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891213",
+                "name": "УДКСУ у Сумській обл.",
+                "okpo": "37970404",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891215",
+                "name": "УДКСУ у Тернопільській обл.",
+                "okpo": "37977599",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891208",
+                "name": "УДКСУ в Одеській обл.",
+                "okpo": "37607526",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891209",
+                "name": "УДКСУ Полтавській обл.",
+                "okpo": "37959255",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891210",
+                "name": "УДКСУ у Рівненській обл.",
+                "okpo": "38012494",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891204",
+                "name": "УДКСУ у Кіровоградській обл.",
+                "okpo": "37918230",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891205",
+                "name": "УДКСУ у Луганській обл.",
+                "okpo": "37991110",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891206",
+                "name": "УДКСУ у Львівській обл.",
+                "okpo": "38008294",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891207",
+                "name": "УДКСУ у Миколаївській обл.",
+                "okpo": "37992030",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891200",
+                "name": "УДКСУ у Закарпатській обл.",
+                "okpo": "37975895",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891201",
+                "name": "УДКСУ у Запорізькій обл.",
+                "okpo": "37941997",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891202",
+                "name": "УДКСУ в Iвано-Франківській обл.",
+                "okpo": "37951998",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891203",
+                "name": "УДКСУ у Київській обл.",
+                "okpo": "37955989",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891194",
+                "name": "УДКСУ у Волинській обл.",
+                "okpo": "38009371",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891195",
+                "name": "УДКСУ у Днiпропетровськiй обл.",
+                "okpo": "37988155",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891193",
+                "name": "УДКСУ у Вінницькій обл.",
+                "okpo": "37979858",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891196",
+                "name": "УДКСУ в Донецькій обл.",
+                "okpo": "38033949",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891197",
+                "name": "УДКСУ у Житомирській обл.",
+                "okpo": "37976485",
+                "services_ref": "1891169"
+            }, {
+                "id": "1891234",
+                "name": "УДКСУ у м.Києві",
+                "okpo": "37993783",
+                "services_ref": "1891169"
+            }]
+    },
+    "companyID": "1891153",
+    "rID": "kas01_n1.f8c69e87f82160"
+}

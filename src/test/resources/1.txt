@@ -1,0 +1,150 @@
+{
+                "__conveyor_api_debug__": {
+                        "http_exec_time": 160.498
+                },
+                "outMessageRef": null,
+                "params": {},
+                "multiParams": null,
+                "convId": null,
+                "ret": {
+                        "identification": {
+                                "surname": {
+                                        "title": "surname",
+                                        "order": "1"
+                                },
+                                "name": {
+                                        "title": "name",
+                                        "order": "2"
+                                },
+                                "patronymic": {
+                                        "title": "patronymic",
+                                        "order": "3"
+                                },
+                                "DOB": {
+                                        "title": "DOB",
+                                        "order": "4"
+                                },
+                                "serPassp": {
+                                        "title": "serPassp",
+                                        "order": "5"
+                                },
+                                "numPassp": {
+                                        "title": "numPassp",
+                                        "order": "6"
+                                },
+                                "dayPassp": {
+                                        "title": "dayPassp",
+                                        "order": "7"
+                                },
+                                "whoPassp": {
+                                        "title": "whoPassp",
+                                        "order": "8"
+                                },
+                                "address": {
+                                        "title": "address",
+                                        "order": "9"
+                                },
+                                "inn": {
+                                        "title": "inn",
+                                        "order": "10"
+                                }
+                        },
+                        "doIdentification": true
+                },
+                "o": [
+                        {
+                                "BLN_BYCLIENTID": [
+                                        {
+                                                "BlackId": "+380927161353",
+                                                "BlackTable": "P",
+                                                "CtoBCode": "F",
+                                                "CtoBDTM": "2015-01-15 15:43:33.716",
+                                                "CtoBRemark": "REDEFINE",
+                                                "CtoBSt": "D",
+                                                "EditorLogin": "BLACKLISTS",
+                                                "SrcID": "7"
+                                        }
+                                ]
+                        }
+                ],
+                "templateCount": null,
+                "conv_ref": null,
+                "errCode": null,
+                "errText": null,
+                "errPriority": null,
+                "hos": null,
+                "messageId": null,
+                "destination": null,
+                "VIP_INF": [
+                        {
+                                "D_MAIN": [
+                                        {
+                                                "CId": "14591672",
+                                                "DCountry": "UA",
+                                                "DDS": "1995-08-07",
+                                                "DId": "1000000001",
+                                                "DNum": "132116",
+                                                "DSer": "АЕ",
+                                                "DType": "000001",
+                                                "DWho": "КРАСНОГВАРДІЙСЬКИМ РВ УМВС УКРАЇНИ В ДНІ"
+                                        }
+                                ],
+                                "DB": "1979-01-31",
+                                "OKPO": "2888507933",
+                                "ruFName": "МАКСИМ",
+                                "ruLName": "ПУГАЧ",
+                                "ruMName": "СЕРГЕЕВИЧ",
+                                "uaFName": "МАКСИМ",
+                                "uaLName": "ПУГАЧ",
+                                "uaMName": "СЕРГІЙОВИЧ"
+                        },
+                        {
+                                "MANAGER": [
+                                        {
+                                                "PersonalLogin": "DD161180KSA",
+                                                "PersonalType": "A"
+                                        },
+                                        {
+                                                "PersonalLogin": "DD240383KTS",
+                                                "PersonalType": "C"
+                                        },
+                                        {
+                                                "PersonalLogin": "DD240383KTS",
+                                                "PersonalType": "A"
+                                        }
+                                ],
+                                "CLOSE_ACCESS": "Y",
+                                "Id": "14591672",
+                                "VipStatus": "Y",
+                                "Warning": "VIP-клиент. По клиенту возвращена ограниченная инф
+ормация 14591672",
+                                "byIvr": "Y",
+                                "byPhoto": "N",
+                                "bySender": "N",
+                                "bySms": "Y"
+                        }
+                ],
+                "blackList": "false",
+                "call_api_BLN_BYCLIENTID": "",
+                "call_api_getSumByCis": "345.9140",
+                "count": 0,
+                "rID": "kas01_n4.4bb7caffecaaf9",
+                "sum": 83.47,
+                "sumFoMonth": "83.4700",
+                "sumLimForNbu": "148000",
+                "sumLim": "15000",
+                "type": "ok",
+                "nodeDelta": "",
+                "create": true,
+                "closeSocket": false,
+                "urlAnswer": "https://dds.test.it.loc/mypayments/tech/acceptUser
+Info",
+                "pubToken": "polygon22440114513",
+                "userSession": "polygon2xf68Q6GT7nG3O54Tg20Y",
+                "ekb": "14591672",
+                "nodeId": "_polygon2",
+                "call_api_INF_NEW": "",
+                "errcode": "",
+                "pension": "false",
+                "errtext": ""
+        }

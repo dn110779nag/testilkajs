@@ -1,0 +1,3620 @@
+{
+    "message": [{
+            "name": "Message",
+            "type": "INFO"
+        }],
+    "head": {
+        "lang": "ru",
+        "pointType": "P24",
+        "bank": "PB"
+    },
+    "services": {
+        "service": [{
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4978,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Плата за Аспирантура з фаху $DOP_NU$"
+                        },
+                        "value": "Плата за Аспирантура з фаху $DOP_NU$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "hintId": 4979,
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Авіаційна, космічна та морська медицина"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Акушерство та гінекологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Анастезіологія та інтенсивна терапія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Внутрішні хвороби"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Гастроентерологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Гематологія та трансфузіологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Гігієна"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Дитяча хірургія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ендокринологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Епідеміологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Загальна практика — сімейна медицина"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Інфекційні хвороби"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Історія медицини"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Кардіологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Клінічна алергологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Клінічна фірмакологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Кріомедицина"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Лікувальна фізкультура та спортивна медицина"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Медична біохімія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Медична реабілітація, фізіотерапія та курортологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Наркологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Нейрохірургія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Нервові хвороби"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Нефрологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Нормальна анатомія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Онкологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Оториноларингологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Офтальмологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Патологічна анатомія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Педіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Променева діагностика та променева терапія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Психіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Пульмонологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ревматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Серцевосуддина хірургія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Соціальна медицина"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Судова медицина"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Травматологія та ортопедія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Трансплантологія та штучні органи"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Урологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Фтизіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Хірургія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Шкірні та венеричні хвороби"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326650",
+                "name": "Аспирантура",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4982,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Благотворительные взносы"
+                        },
+                        "value": "Благотворительные взносы"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326652",
+                "name": "Благотворительные взносы",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4983,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Плата за аренду"
+                        },
+                        "value": "Плата за аренду"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326654",
+                "name": "За аренду",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4984,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Плата за Интернатура з фаху $DOP_NU$"
+                        },
+                        "value": "Плата за Интернатура з фаху $DOP_NU$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Акушерство і гінекологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Анестезіологія та інтенсивна терапія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Внутрішні хвороби"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Дерматовенерологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Загальна практика — сімейна медицина"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Інфекційні хвороби"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Клінічна онкологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Медицина невідкладних станів"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Неврологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ортопедія і травматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Отоларингологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Офтальмологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Паталогічна анатомія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Педіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Психіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Пульмонологія та фтизіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Урологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Хірургія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Неонатологія"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326656",
+                "name": "Интернатура",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4985,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Плата за передатестаційний цикл з фаху $DOP_NU$"
+                        },
+                        "value": "Плата за передатестаційний цикл з фаху $DOP_NU$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "терапія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Акушерство і гінекологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Дерматовенерологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Дитяча стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "для зубних техніків"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ендокринологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Загальна практика — сімейна медицина"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Інфекційні хвороби"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Медицина невідкладних станів"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Неонатологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Нервові хвороби"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ортодонтія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ортопедична стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Педіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Терапевтична стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Хірургічна стоматологія"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326658",
+                "name": "передатестаційний цикл",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4987,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Плата за Спеціалізація з фаху $DOP_NU$"
+                        },
+                        "value": "Плата за Спеціалізація з фаху $DOP_NU$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Дерматовенерологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Дитяча стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ендокринологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Загальна практика — сімейна медицина"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Загальна практика — сімейна медицина для лікарів педіатрів-дільничних"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Загальна практика — сімейна медицина для лікарів терапевтів-дільничних"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Неонатологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ортодонтія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ортопедична стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Терапевтична стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Терапія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Хірургічна стоматологія"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326663",
+                "name": "Спеціалізація",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4988,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Плата за Стажування з фаху $DOP_NU$"
+                        },
+                        "value": "Плата за Стажування з фаху $DOP_NU$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Ортодонтія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Акушерство і гінекологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Дерматовенерологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Дитяча стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ендокринологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Загальна практика — сімейна медицина"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Інфекційні хвороби"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Медицина невідкладних станів"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Неврологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Неонатологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Нервові хвороби"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ортопедична стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Педіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Терапевтична стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Терапія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Фтизіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Хірургічна стоматологія"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326665",
+                "name": "Стажування",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4991,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Плата за Тематичне удосконалення з фаху $DOP_NU$"
+                        },
+                        "value": "Плата за Тематичне удосконалення з фаху $DOP_NU$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Актуальні питання терапії в практиці сімейного лікаря Розділи: Хвороби органів дихання, хвороби органів травлення"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "«Захворювання, що передаються статевим шляхом» для лікарів-дерматовенерологів"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання внутрішньої медицини"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання гастроентерології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання гатроентерології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання гематології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання інфектології. Сучасні підходи до специфічної імунопрофілактики"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання кардіології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання клінічної діабетології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання клінічної ендокринології в практиці лікаря-терапевта"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання клінічної трансплантології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання медико-соціальної експертизи в неврології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання неонатології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання нефрології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання пульмонології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання ревматології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання стоматології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання судинної хірургії"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання терапії в практиці сімейного лікаря Розділи: Хвороби нирок, хвороби органів кровотворення"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Актуальні питання терапії в практиці сімейного лікаря Розділи: хвороби системи кровообігу, ревматичні хвороби"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Амбулаторно-поліклінічна допомога дітям"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ведення фізіологічної вагітності. Актуальні питання акушерства та гінекології в практиці сімейного лікаря"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Дитяча стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Діагностика і ортодонтичне лікування зубащелепно-лицевих аномалій"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ендокринні аспекти акушерства і гінекології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ендокринологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Естетико-косметичне протезування"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Інтеграційні аспекти в лікуванні та реабілітації стоматологічних хворих"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Невідкладні стани в акушерстві і гінекології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Невідкладні стани в клініці внутрішніх хвороб"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Невідкладні стани при політравмі"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Нейрофізіологічні методи дослідження при судинни захворюваннях"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Неонатологія з позиції сімейного лікаря"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "основи інтенсивної терапії новонароджених з фаху «Неонатологія»"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Особливості ортодонтичної допомоги стоматологічним пацієнтам"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Оториноларинологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Первинна реанімація та післяопераційна допомога новонародженим з фаху «Неонатологія»"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Проблема ВІЛ/СНІДу, парентеральних гепатитів та інших сучасних інфекцій в стоматології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Судинні захворювання та ушкодження нервової системи при внутрішніх хворобах"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Сучасні аспекти клінічної тиреодології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Сучасні підходи до надання перинатальної допомоги"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Технологія виготовлення ортодонтичних апаратів"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Технологія виготовлення різних видів сучасних зубних протезів"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Техологія виготовлення функціонально-діючих апаратів"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326667",
+                "name": "Тематичне удосконалення",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4993,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Оплата за научные исследования"
+                        },
+                        "value": "Оплата за научные исследования"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326669",
+                "name": "Научные исследования",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4994,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Плата за навчання $DOP_NU$, студент $FIO$, платящий/родитель $DOP_UNIV_SUB_COM$"
+                        },
+                        "value": "Плата за навчання $DOP_NU$, студент $FIO$, платящий/родитель $DOP_UNIV_SUB_COM$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Лікувальна справа"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Педіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Медичний"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Стоматологія"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326671",
+                "name": "Обучение  УМСА",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4996,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Плата за навчання $DOP_NU$, студент $FIO$, платящий/родитель $DOP_UNIV_SUB_COM$"
+                        },
+                        "value": "Плата за навчання $DOP_NU$, студент $FIO$, платящий/родитель $DOP_UNIV_SUB_COM$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Зубний технік"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Сестринська справа"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Курси косметології"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Курси масажу"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Фармація"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326673",
+                "name": "Обучение медколледж (в т.ч.курсы)",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4997,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "плата за н/б $DOP_NU$"
+                        },
+                        "value": "плата за н/б $DOP_NU$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Медичний № 1"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Медичний №2"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Стоматологія"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326675",
+                "name": "Оплата за пропущені заняття",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 4998,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Плата за Ординатура з фаху $DOP_NU$"
+                        },
+                        "value": "Плата за Ординатура з фаху $DOP_NU$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Акушерство та гінекологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Анестезіологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Дерматовенерологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Дитяча стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ендокринологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Загальна практика — сімейна медицина"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Кардіологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Неврологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Неонатологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Онкологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ортодонтія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ортопедична стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Ортопедія і травматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Отоларингологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Офтальмологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Паталогічна анатомія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Педіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Психіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Пульмонологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Стоматолгія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Терапевтична стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Терапія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Урологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Фтизіатрія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Хірургічна стоматологія"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Хірургія"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326679",
+                "name": "Ординатура",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 5000,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Плата за підготовчі курси $DOP_NU$"
+                        },
+                        "value": "Плата за підготовчі курси $DOP_NU$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Вечерние 7 мес, 9 класс"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Вечерние 4,5 мес, 11 класс"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Вечерние 8 месяцев, 11 класс"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Заочные"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326681",
+                "name": "Подготовительные курсы",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 5001,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Оплата за услуги"
+                        },
+                        "value": "Оплата за услуги"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326683",
+                "name": "Услуги",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 5003,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Оплата за общежитие, $DOP_NU$"
+                        },
+                        "value": "Оплата за общежитие, $DOP_NU$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Абитуриенты"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Аспирантура"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Интернатура"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Курсанты"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Медицинский"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Стоматология"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Сотрудники"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326685",
+                "name": "Общежитие УМСА",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }, {
+                "property": [{
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Наименование",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 160,
+                            "regEx": "^.{3,160}$",
+                            "default": "УМСA"
+                        },
+                        "value": "УМСA"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV1_SUB_COM",
+                        "hintId": 136,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Форма обучения:",
+                            "required": true,
+                            "regEx": "^.{1,14}$",
+                            "default": "1"
+                        },
+                        "value": "1"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV_SUB_COM",
+                        "hintId": 240,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО платящего/родителя",
+                            "required": true,
+                            "regEx": "^.{0,99}$"
+                        }
+                    }, {
+                        "type": "AddressProperty",
+                        "alias": "ADDRESS",
+                        "config": {
+                            "config": "AddressConf",
+                            "name": "Адрес",
+                            "required": false,
+                            "max": 128,
+                            "esaID": false
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "DEST",
+                        "hintId": 5004,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Назначение",
+                            "required": true,
+                            "max": 160,
+                            "regEx": "^[\\w\\s\\W\\S]{10,160}$",
+                            "default": "Оплата за общежитие, $DOP_NU$"
+                        },
+                        "value": "Оплата за общежитие, $DOP_NU$"
+                    }, {
+                        "type": "ListProperty",
+                        "alias": "NU",
+                        "config": {
+                            "config": "ComboBoxConf",
+                            "name": "Услуга",
+                            "required": true,
+                            "view": {
+                                "column": [{
+                                        "name": "Услуга",
+                                        "alias": "posl"
+                                    }],
+                                "display": "posl",
+                                "key": "posl"
+                            },
+                            "model": {
+                                "row": [{
+                                        "cell": [{
+                                                "value": "Фармація"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Зубний технік"
+                                            }]
+                                    }, {
+                                        "cell": [{
+                                                "value": "Сестринська справа"
+                                            }]
+                                    }]
+                            }
+                        },
+                        "value": {}
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "COMPANY_OKPO",
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ЕГРПОУ",
+                            "required": true,
+                            "restriction": "RO",
+                            "max": 35,
+                            "regEx": "^[0-9]{8,10}$",
+                            "default": "02010824"
+                        },
+                        "value": "02010824"
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "PHONE",
+                        "hintId": 135,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Телефон",
+                            "required": false,
+                            "max": 20,
+                            "regEx": "^(\\+)?[\\d-]{1,13}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV2_SUB_COM",
+                        "hintId": 202,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Курс:",
+                            "required": true,
+                            "regEx": "^.{1,1}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV3_SUB_COM",
+                        "hintId": 148,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Группа:",
+                            "required": true,
+                            "regEx": "^.{1,25}$"
+                        }
+                    }, {
+                        "type": "SumProperty",
+                        "alias": "SUM",
+                        "config": {
+                            "config": "MoneyConf",
+                            "name": "Сумма",
+                            "required": true,
+                            "max": 14
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "UNIV4_SUB_COM",
+                        "hintId": 151,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "Договор",
+                            "required": true,
+                            "regEx": "^.{1,30}$"
+                        }
+                    }, {
+                        "type": "SimpleProperty",
+                        "alias": "FIO",
+                        "hintId": 160,
+                        "config": {
+                            "config": "StandartConf",
+                            "name": "ФИО студента",
+                            "required": true,
+                            "max": 50,
+                            "regEx": "^.{1,50}$"
+                        }
+                    }],
+                "id": "2326687",
+                "name": "Общежитие медколледж",
+                "required": false,
+                "checked": false,
+                "forbidden": false,
+                "recalcMetersSum": false,
+                "company_codifier": "101716",
+                "block_save_template": false
+            }],
+        "division": [{
+                "id": "93960",
+                "name": "Аспирантура УМСА",
+                "code": "06",
+                "okpo": "02010824",
+                "services_ref": "2326650"
+            }, {
+                "id": "93962",
+                "name": "Благотворительные взносы",
+                "code": "09",
+                "okpo": "02010824",
+                "services_ref": "2326652"
+            }, {
+                "id": "1911347",
+                "name": "За аренду",
+                "code": "10",
+                "okpo": "02010824",
+                "services_ref": "2326654"
+            }, {
+                "id": "92299",
+                "name": "Интернатура УМСА",
+                "code": "03",
+                "okpo": "02010824",
+                "services_ref": "2326656"
+            }, {
+                "id": "2130114",
+                "name": "Передаттестационный цикл",
+                "okpo": "02010824",
+                "services_ref": "2326658"
+            }, {
+                "id": "2130115",
+                "name": "Специализация",
+                "okpo": "02010824",
+                "services_ref": "2326663"
+            }, {
+                "id": "2130119",
+                "name": "Стажировка",
+                "okpo": "02010824",
+                "services_ref": "2326665"
+            }, {
+                "id": "2130122",
+                "name": "Тематичне удосконалення",
+                "okpo": "02010824",
+                "services_ref": "2326667"
+            }, {
+                "id": "1921024",
+                "name": "Научные исследования",
+                "okpo": "02010824",
+                "services_ref": "2326669"
+            }, {
+                "id": "92297",
+                "name": "Обучение УМСА",
+                "code": "01",
+                "okpo": "02010824",
+                "services_ref": "2326671"
+            }, {
+                "id": "1756873",
+                "name": "Обучение медколледж (в т.ч.курсы)",
+                "code": "10",
+                "okpo": "02010824",
+                "services_ref": "2326673"
+            }, {
+                "id": "2326649",
+                "name": "Оплата за пропущені заняття",
+                "okpo": "02010824",
+                "services_ref": "2326675"
+            }, {
+                "id": "92300",
+                "name": "Ординатура УМСА",
+                "code": "05",
+                "okpo": "02010824",
+                "services_ref": "2326679"
+            }, {
+                "id": "93957",
+                "name": "Подготовительные курсы",
+                "code": "07",
+                "okpo": "02010824",
+                "services_ref": "2326681"
+            }, {
+                "id": "93961",
+                "name": "Услуги",
+                "code": "08",
+                "okpo": "02010824",
+                "services_ref": "2326683"
+            }, {
+                "id": "92298",
+                "name": "Общежитие УМСА",
+                "code": "02",
+                "okpo": "02010824",
+                "services_ref": "2326685"
+            }, {
+                "id": "1992216",
+                "name": "Общежитие мед.колледжа",
+                "okpo": "02010824",
+                "services_ref": "2326687"
+            }]
+    },
+    "companyID": "92224",
+    "rID": "kas02_n6.82a5f13e61737d"
+}
+
