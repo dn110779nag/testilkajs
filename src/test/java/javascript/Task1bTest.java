@@ -51,7 +51,7 @@ public class Task1bTest {
 
     private final AbstractScriptRunner sr = new RhinoScriptRunner();
     
-    
+    @Ignore
     @Test
     public void test1() throws IOException, ScriptException {
         System.out.println("test1");

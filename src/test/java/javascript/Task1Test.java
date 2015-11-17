@@ -73,7 +73,7 @@ public class Task1Test {
         assertEquals("403281",provideId);
     }
     
-    
+    @Ignore
     @Test
     public void test1b() throws IOException, ScriptException {
         System.out.println("test1b");
@@ -103,7 +103,7 @@ public class Task1Test {
         
     }
     
-    
+    @Ignore
     @Test
     public void testExtractTmpls() throws IOException, ScriptException {
         System.out.println("testExtractTmpls");
