@@ -123,7 +123,7 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener{
                 logArea.setText("");
                 IOValues ret = new RhinoScriptRunner().runScriptFromStrings(scriptEditor.getText(), inputEditor.getText());
                 JsonParser parser = new JsonParser();
-                Gson gson = new GsonBuilder().setPrettyPrinting().create(); 
+                //Gson gson = new GsonBuilder().setPrettyPrinting().create(); 
                 JsonElement el = parser.parse(ret.getOutputValue());
                 JsonElement jerr = el.getAsJsonObject().get("stack");
                 

@@ -14,6 +14,7 @@ import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Container;
 import java.io.Reader;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -108,6 +109,9 @@ public class JsonTree extends JTree {
         addTreeSelectionListener(e -> {
             DefaultMutableTreeNode node
                     = (DefaultMutableTreeNode) getLastSelectedPathComponent();
+            if(node==null) {
+                return;
+            }
             NodeData data = (NodeData) node.getUserObject();
             if (data != null && data.getJsonElement() != null) {
                 selectionListener.onSelect(new GsonBuilder().setPrettyPrinting().create().toJson(data.getJsonElement()));
@@ -117,7 +121,10 @@ public class JsonTree extends JTree {
 
     public void buildTree() {
         top.removeAllChildren();
+        DefaultTreeModel model = (DefaultTreeModel) this.getModel();
         top.setUserObject(new NodeData(jsonElement, "data"));
+        model.setRoot(top);
+
         prepareElement(top, jsonElement);
         repaint();
         setSelectionRow(0);
@@ -161,10 +168,25 @@ public class JsonTree extends JTree {
 
         Container c = testFrame.getContentPane();
         c.setLayout(new BorderLayout());
-        JsonTree t = new JsonTree(s -> System.out.println(s));
+        final JsonTree t = new JsonTree(s -> System.out.println(s));
         t.setJson("{\"ttt\":\"vvv\",\"arr\":[0,1,2,3], \"o1\":{\"ov\":true, \"arr2\":[{\"ov2\":\"ttt\",\"ov3\":111}]}}");
         c.add(new JScrollPane(t));
+        
+        JButton btn = new JButton("json2");
+        
+        btn.addActionListener(e -> t.setJson("{\"ttt\":\"vvv\"}"));
+        c.add(btn, BorderLayout.NORTH);
+        
+        
+        JButton btn3 = new JButton("json3");
+        
+        btn3.addActionListener(e -> t.setJson("{\"ttt\":\"vvv2\",\"arr\":[0,1,2,3], \"o1\":{\"ov\":true, \"arr2\":[{\"ov2\":\"ttt\",\"ov3\":111}]}}"));
+        c.add(btn3, BorderLayout.SOUTH);
         testFrame.setVisible(true);
+        
+        t.setJson("{\"ttt\":\"vvv\"}");
+        
+        t.setJson("{\"ttt\":\"vvv2\",\"arr\":[0,1,2,3], \"o1\":{\"ov\":true, \"arr2\":[{\"ov2\":\"ttt\",\"ov3\":111}]}}");
 
     }
 
