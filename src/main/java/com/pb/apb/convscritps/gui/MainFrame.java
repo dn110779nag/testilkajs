@@ -30,6 +30,7 @@ import javax.imageio.ImageIO;
 import javax.script.ScriptException;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JEditorPane;
 import javax.swing.JFileChooser;
@@ -60,6 +61,7 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener {
     private final JsonTree jsonTree = new JsonTree(this);
     private final JComboBox<Integer> fontBox = new JComboBox();
     private File currDir = new File("").getAbsoluteFile();
+    private final JCheckBox switchBox = new JCheckBox("Switch", true);
 
     public MainFrame() {
 //        scriptEditor.setFont(scriptEditor.getFont().deriveFont(24f));
@@ -81,7 +83,7 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         //TextAreaOutputStream in = new TextAreaOutputStream(logArea);
-
+        switchBox.setToolTipText("Переключать на резальтат при запуске");
         System.setErr(new PrintStream(new TextAreaOutputStream(logArea)));
         System.setOut(new PrintStream(new TextAreaOutputStream(logArea)));
 
@@ -146,7 +148,9 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener {
 
                 //outputEditor.setText(gson.toJson(el));
                 jsonTree.setJson(el);
-                tabPane.setSelectedIndex(2);
+                if(this.switchBox.isSelected()){
+                    tabPane.setSelectedIndex(2);
+                }
                 String err;
                 if (jerr != null && !(jerr instanceof JsonNull) && (err = jerr.getAsString()) != null && !err.trim().equals("")) {
                     error("error: " + err);
@@ -206,6 +210,7 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener {
         });
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panel.add(this.fontBox);
+        panel.add(this.switchBox);
         toolBar.add(panel);
         return toolBar;
     }
