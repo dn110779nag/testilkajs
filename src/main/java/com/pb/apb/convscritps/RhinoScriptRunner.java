@@ -69,7 +69,9 @@ public class RhinoScriptRunner extends AbstractScriptRunner {
             logger.debug("script = " + buf);
             Scriptable scope = new Global(ct);
             ScriptableObject.putProperty(scope, "dataStr", inputJson);
+            long start = System.nanoTime();
             ct.evaluateString(scope, buf.toString(), "<cmd2>", 1, null);
+            logger.debug("execution time: "+(System.nanoTime()-start));
             Scriptable ret = (Scriptable) scope.get("ret", scope);
             return new IOValues(ret.get("i", ret).toString(), ret.get("o", ret).toString());
         }

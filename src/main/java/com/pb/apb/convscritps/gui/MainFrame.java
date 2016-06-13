@@ -23,6 +23,7 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.text.DecimalFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -121,7 +122,12 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener{
         startBtn.addActionListener((ActionEvent e) -> {
             try {
                 logArea.setText("");
+                long start = System.nanoTime();
                 IOValues ret = new RhinoScriptRunner().runScriptFromStrings(scriptEditor.getText(), inputEditor.getText());
+                long finish = System.nanoTime();
+                DecimalFormat df = new DecimalFormat();
+                df.setGroupingUsed(true);
+                logArea.append("execution time: "+df.format( finish-start)+ " ns\n");
                 JsonParser parser = new JsonParser();
                 //Gson gson = new GsonBuilder().setPrettyPrinting().create(); 
                 JsonElement el = parser.parse(ret.getOutputValue());

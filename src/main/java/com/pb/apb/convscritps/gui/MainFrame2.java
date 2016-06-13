@@ -21,6 +21,9 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -164,8 +167,23 @@ public class MainFrame2 extends JFrame {
         return toolBar;
     }
 
-    public static void main(String[] args) {
-        new MainFrame2().setVisible(true);
+    public static void main(String[] args) throws Exception {
+        String pk = "B7HSnNKCRslEr16nIdghudXTt5uOtWhLoPBUsZAz";
+        String dd = "eyJvcmRlcl9pZCI6IkJpcGxhbl80NzUxNDk1MTcuNS4xIiwic3VtIjoxLCJkZXN0aW5hdGlvbiI6ItCf0LvQsNGC0LXQtiDQsiDQkdGL0YHRgtGA0L4g0L7Qv9C70LDRgtC40YLRjCIsInB1YmxpY19rZXkiOiJpMjcyMTcwMzY0NTUiLCJjdXJyZW5jeSI6IlVBSCIsImNhbGxiYWNrIjoiaHR0cHM6Ly9jcC5wcml2YXRiYW5rLnVhL2FwaS8xL2pzb24vY2FsbGJhY2svNTY2ZTczMDFjOWNmODRlMzg1Y2U0ZTIzLzJjZjIwYTAzYTNhYTU0OTdhYjNmNzg0ZTI2NGNhZGNlYmExOGE1YjciLCJwYXlfd2F5IjoiY2FyZCIsInZlcnNpb24iOiIzIiwicmVzdWx0X3VybCI6Imh0dHA6Ly8xMC40Mi4xMy4xNTg6MTMxMjcvbXlwYXltZW50cy90aGFua3M/YXV0aG9yaXphdGlvblNvdXJjZT1XVF8xMjMxMTQ2ODExMjk3Jmxhbmc9cnUifQ==";
+        String b64Data = new String(Base64.getDecoder().decode(dd));
+        
+        //String txt = pk+"{\"order_id\":\"Biplan_546354343.5.1\",\"sum\":\"1\",\"destination\":\"тест\",\"lang\":\"ru\",\"public_key\":\"i27217036455\",\"currency\":\"UAH\",\"callback\":\"\",\"pay_way\":\"card\",\"version\":\"buy\",\"result_url\":\"https://privatbank.ua/ru/\"}"+pk;
+        String txt = pk+dd+pk;
+        
+        //txt = "test";
+        MessageDigest SHA = MessageDigest.getInstance("SHA-1");
+        SHA.reset();
+        SHA.update(txt.getBytes("UTF-8"));
+        byte[] dg = SHA.digest();
+        String outStr = Base64.getEncoder().encodeToString(dg );
+        System.out.println(dg.length);
+        System.out.println(txt);
+        System.out.println(outStr);
     }
 
     private void error(Exception ex) {
@@ -177,5 +195,5 @@ public class MainFrame2 extends JFrame {
         logArea.append(err+"\n");
         
     }
-
+    
 }
