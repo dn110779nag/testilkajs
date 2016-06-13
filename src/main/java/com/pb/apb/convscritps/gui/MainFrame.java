@@ -16,6 +16,7 @@ import com.pb.apb.convscritps.StringUtil;
 import com.pb.apb.convscritps.json.JsonRepair;
 import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -30,10 +31,13 @@ import javax.imageio.ImageIO;
 import javax.script.ScriptException;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JEditorPane;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 import javax.swing.JTabbedPane;
@@ -48,7 +52,7 @@ import org.mozilla.javascript.RhinoException;
  *
  * @author Новомлинов Александр
  */
-public class MainFrame extends JFrame implements JsonTree.SelectionListener{
+public class MainFrame extends JFrame implements JsonTree.SelectionListener {
 
     private final JTabbedPane tabPane = new JTabbedPane();
     private final JTextArea logArea = new JTextArea();
@@ -56,9 +60,12 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener{
     private final JEditorPane inputEditor = new JEditorPane();
     private final JEditorPane outputEditor = new JEditorPane();
     private final JsonTree jsonTree = new JsonTree(this);
+    private final JComboBox<Integer> fontBox = new JComboBox();
     private File currDir = new File("").getAbsoluteFile();
+    private final JCheckBox switchBox = new JCheckBox("Switch", true);
 
     public MainFrame() {
+//        scriptEditor.setFont(scriptEditor.getFont().deriveFont(24f));
         try {
             setTitle("Тестилка js");
             setSize(800, 600);
@@ -77,10 +84,10 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener{
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         //TextAreaOutputStream in = new TextAreaOutputStream(logArea);
-        
+        switchBox.setToolTipText("Переключать на резальтат при запуске");
         System.setErr(new PrintStream(new TextAreaOutputStream(logArea)));
         System.setOut(new PrintStream(new TextAreaOutputStream(logArea)));
-        
+
     }
 
     private void prepareUI() throws IOException {
@@ -108,14 +115,26 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener{
         splitPane.setResizeWeight(0.7);
         c.add(splitPane, BorderLayout.CENTER);
 
-        
         c.add(prepareToolBar(), BorderLayout.NORTH);
-        
-        
+        int cur = scriptEditor.getFont().getSize();
+        for (int i = cur; i <= 40; i++) {
+            this.fontBox.addItem(i);
+        }
+        this.fontBox.setSelectedItem(cur);
+        this.fontBox.addActionListener(e -> {
+            setFontSize((int) fontBox.getSelectedItem());
+        });
 
     }
-    
-    private JToolBar prepareToolBar() throws IOException{
+
+    private void setFontSize(float size) {
+        scriptEditor.setFont(scriptEditor.getFont().deriveFont(size));
+        inputEditor.setFont(inputEditor.getFont().deriveFont(size));
+        outputEditor.setFont(outputEditor.getFont().deriveFont(size));
+        logArea.setFont(logArea.getFont().deriveFont(size));
+    }
+
+    private JToolBar prepareToolBar() throws IOException {
         JToolBar toolBar = new JToolBar();
         JButton startBtn = new JButton(new ImageIcon(ImageIO.read(this.getClass().getResource("/icons/start.png"))));
         toolBar.add(startBtn);
@@ -132,13 +151,15 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener{
                 //Gson gson = new GsonBuilder().setPrettyPrinting().create(); 
                 JsonElement el = parser.parse(ret.getOutputValue());
                 JsonElement jerr = el.getAsJsonObject().get("stack");
-                
+
                 //outputEditor.setText(gson.toJson(el));
                 jsonTree.setJson(el);
-                tabPane.setSelectedIndex(2);
+                if(this.switchBox.isSelected()){
+                    tabPane.setSelectedIndex(2);
+                }
                 String err;
-                if(jerr!=null && !(jerr instanceof JsonNull) && (err=jerr.getAsString())!=null && !err.trim().equals("")){
-                    error("error: "+err);
+                if (jerr != null && !(jerr instanceof JsonNull) && (err = jerr.getAsString()) != null && !err.trim().equals("")) {
+                    error("error: " + err);
                 }
             } catch (IOException | ScriptException | RhinoException ex) {
                 error(ex);
@@ -175,48 +196,52 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener{
 
         }
 
-        jsBtn.addActionListener(new OpenFileAction(scriptEditor,0));
+        jsBtn.addActionListener(new OpenFileAction(scriptEditor, 0));
 
         JButton jsonBtn = new JButton(new ImageIcon(ImageIO.read(this.getClass().getResource("/icons/json.png"))));
         toolBar.add(jsonBtn);
-        jsonBtn.addActionListener(new OpenFileAction(inputEditor,1));
-        
+        jsonBtn.addActionListener(new OpenFileAction(inputEditor, 1));
+
         JButton fixBtn = new JButton(new ImageIcon(ImageIO.read(this.getClass().getResource("/icons/Repair_icon_.png"))));
         toolBar.add(fixBtn);
-        fixBtn.addActionListener(e->{
+        fixBtn.addActionListener(e -> {
             try {
                 String str = this.inputEditor.getText();
                 String ret = new JsonRepair().loadJson(str);
                 this.inputEditor.setText(ret);
                 tabPane.setSelectedIndex(1);
             } catch (IOException ex) {
-                error(""+ex);
+                error("" + ex);
             }
         });
-        
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        panel.add(this.fontBox);
+        panel.add(this.switchBox);
+        toolBar.add(panel);
         return toolBar;
     }
-    
+
     public static void main(String[] args) {
         new MainFrame().setVisible(true);
     }
 
     private void error(Exception ex) {
         //error(""+(ex instanceof RhinoException));
-        if(ex instanceof RhinoException){
+        if (ex instanceof RhinoException) {
             RhinoException ecmaError = (RhinoException) ex;
-            error("lineSource:"+ecmaError.lineSource()
-                    +";\nlineNumber:"+(ecmaError.lineNumber()-2)+
-                    ";\ndetails:"+ecmaError.details());
+            error("lineSource:" + ecmaError.lineSource()
+                    + ";\nlineNumber:" + (ecmaError.lineNumber() - 2)
+                    + ";\ndetails:" + ecmaError.details());
         } else {
-            error(""+ex);
+            error("" + ex);
         }
-        
+
     }
+
     private void error(String err) {
         JOptionPane.showMessageDialog(MainFrame.this, err, "Ошибка!!!", JOptionPane.ERROR_MESSAGE);
-        logArea.append(err+"\n");
-        
+        logArea.append(err + "\n");
+
     }
 
     @Override
