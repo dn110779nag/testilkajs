@@ -1,6 +1,6 @@
 
 if(!data.stack) delete data.stack;
-ret.o= JSON.stringify(data);
+_very_ugly_ret_.o= JSON.stringify(data);
 //print(JSON.stringify(ret));
-ret;
+_very_ugly_ret_;
 
