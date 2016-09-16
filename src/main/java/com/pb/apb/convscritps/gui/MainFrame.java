@@ -84,7 +84,7 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         //TextAreaOutputStream in = new TextAreaOutputStream(logArea);
-        switchBox.setToolTipText("Переключать на резальтат при запуске");
+        switchBox.setToolTipText("Переключать на результат при запуске");
         System.setErr(new PrintStream(new TextAreaOutputStream(logArea)));
         System.setOut(new PrintStream(new TextAreaOutputStream(logArea)));
 
@@ -230,7 +230,7 @@ public class MainFrame extends JFrame implements JsonTree.SelectionListener {
         if (ex instanceof RhinoException) {
             RhinoException ecmaError = (RhinoException) ex;
             error("lineSource:" + ecmaError.lineSource()
-                    + ";\nlineNumber:" + (ecmaError.lineNumber() - 2)
+                    + ";\nlineNumber:" + (ecmaError.lineNumber())
                     + ";\ndetails:" + ecmaError.details());
         } else {
             error("" + ex);

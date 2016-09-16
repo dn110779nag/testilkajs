@@ -59,12 +59,14 @@ public class RhinoScriptRunner extends AbstractScriptRunner {
                 InputStreamReader sr = new InputStreamReader(this.getClass().getResourceAsStream("/js/util/suffix.js"), "UTF-8");
                 BufferedReader bsr = new BufferedReader(sr);) {
             StringBuilder buf = new StringBuilder();
-            read(buf, bpr);
+            StringBuilder sbpr = new StringBuilder();
+            read(sbpr, bpr);
             buf.append(script);
             read(buf, bsr);
-            logger.debug("script = " + buf);
+            logger.debug("script = {}", buf);
             Scriptable scope = new Global(ct);
             ScriptableObject.putProperty(scope, "dataStr", inputJson);
+            ct.evaluateString(scope, sbpr.toString(), "<cmd2>", 1, null);
             long start = System.nanoTime();
             ct.evaluateString(scope, buf.toString(), "<cmd2>", 1, null);
             logger.debug("execution time: "+(System.nanoTime()-start));
